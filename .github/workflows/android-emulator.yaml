@@ -12,12 +12,7 @@ jobs:
 #       - run: ./adb_devices.sh
       - uses: malinskiy/action-android/install-sdk@release/0.0.5
       - run: |
-          cd $ANDROID_HOME/tools
-          ls -lat
-          cd $ANDROID_HOME/tools/bin
-          ls -lat
-          cd $ANDROID_HOME/tools/bin/sdkmanager
-          ls -lat
+          yes | sdkmanager "system-images;android-29;google_apis;x86_64" 
           
           
           

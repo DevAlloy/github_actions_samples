@@ -14,9 +14,9 @@ kill_all_emulators() {
     $ADB devices | grep emulator | cut -f1 | while read line; do $ADB -s $line emu kill; done
 }
 
-$ADB kill-server
-$SDK_MANAGER "emulator"
-yes | $SDK_MANAGER "system-images;android-29;google_apis;x86_64" #default
+# $ADB kill-server
+# $SDK_MANAGER "emulator"
+# yes | $SDK_MANAGER "system-images;android-29;google_apis;x86_64" #default
 
 # echo no | $AVD_MANAGER create avd --force --name testAvd --abi google_apis/x86_64 --package 'system-images;android-29;google_apis;x86_64'
 
@@ -24,7 +24,9 @@ yes | $SDK_MANAGER "system-images;android-29;google_apis;x86_64" #default
 # kill_all_emulators
 # $EMULATOR -avd testAvd -no-window -no-boot-anim -no-audio -verbose > /dev/null 2>&1 &
 # #$EMULATOR -avd testAvd -no-audio -no-window > /dev/null 2>&1 &
-# $ADB devices
+ls -la $ADB
+echo $PATH
+$ADB devices
 # #./wait_for_emulator.sh
 # sleep 60
 

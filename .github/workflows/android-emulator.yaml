@@ -5,13 +5,13 @@ on:
 
 jobs:
   android-emulator:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     name: android emulator
     steps:
       - uses: actions/checkout@v1
       - uses: malinskiy/action-android/install-sdk@release/0.0.5
-#       - run: ./adb_devices.sh
-      - run: adb devices
+      - run: ./adb_devices.sh
+#       - run: adb devices
       - run: echo $ANDROID_HOME
 #       - run: ./start_emulator.sh
 

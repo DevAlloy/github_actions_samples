@@ -2,6 +2,7 @@ on:
   push:
     paths: 
       - "**.sh"
+      - "**.yaml"
 
 jobs:
   android-emulator:

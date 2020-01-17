@@ -9,11 +9,11 @@ jobs:
     name: android emulator
     steps:
       - uses: actions/checkout@v1
-      - run: ./adb_devices.sh
-      - uses: malinskiy/action-android/install-sdk@release/0.0.5
-      - run: ./adb_devices.sh
+#       - run: ./adb_devices.sh
+#       - uses: malinskiy/action-android/install-sdk@release/0.0.5
+#       - run: ./adb_devices.sh
 #       - run: adb devices
-      - run: echo $ANDROID_HOME
-#       - run: ./start_emulator.sh
+#       - run: echo $ANDROID_HOME
+      - run: ./start_emulator.sh
 
 

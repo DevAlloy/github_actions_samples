@@ -13,6 +13,8 @@ jobs:
       - uses: malinskiy/action-android/install-sdk@release/0.0.5
       - run: |
           echo $ANDROID_HOME
+          cd $ANDROID_HOME
+          ls -lat
           
 #       - run: ./adb_devices.sh
 #       - run: adb devices

@@ -18,18 +18,18 @@ $ADB kill-server
 $SDK_MANAGER "emulator"
 yes | $SDK_MANAGER "system-images;android-29;google_apis;x86_64" #default
 
-echo no | $AVD_MANAGER create avd --force --name testAvd --abi google_apis/x86_64 --package 'system-images;android-29;google_apis;x86_64'
+# echo no | $AVD_MANAGER create avd --force --name testAvd --abi google_apis/x86_64 --package 'system-images;android-29;google_apis;x86_64'
 
-$EMULATOR -list-avds
-kill_all_emulators
-$EMULATOR -avd testAvd -no-window -no-boot-anim -no-audio -verbose > /dev/null 2>&1 &
-#$EMULATOR -avd testAvd -no-audio -no-window > /dev/null 2>&1 &
-$ADB devices
-#./wait_for_emulator.sh
-sleep 60
+# $EMULATOR -list-avds
+# kill_all_emulators
+# $EMULATOR -avd testAvd -no-window -no-boot-anim -no-audio -verbose > /dev/null 2>&1 &
+# #$EMULATOR -avd testAvd -no-audio -no-window > /dev/null 2>&1 &
+# $ADB devices
+# #./wait_for_emulator.sh
+# sleep 60
 
-#$ADB -e shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > /tmp/screen.png
+# #$ADB -e shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > /tmp/screen.png
 
-$ADB -e shell screencap /sdcard/screen.png
-$ADB -e pull /sdcard/screen.png
+# $ADB -e shell screencap /sdcard/screen.png
+# $ADB -e pull /sdcard/screen.png
 
